@@ -82,24 +82,34 @@ else {
 
 console.log ("\nquestão 05");
 
-let angulo1 = true;
-let angulo2 = true;
-let angulo3 = true;
+let angulo1 = 15;
+let angulo2 = 13;
+let angulo3 = 14;
 
-if (angulo1 && angulo2 && angulo3) {
-    console.log ("São ângulos de um triangulo");
-} else {
-    console.log ("Erro, não são ângulos de um triângulo");
+if (angulo1 === 0 || angulo2 === 0 || angulo3 ===0) {
+    console.log ("Isso não é um triângulo");
 }
+else if (angulo1 === angulo2 && angulo2 === angulo3 && angulo1 === angulo3) {
+    console.log ("Esse triângulo é equilátero");
+}
+else if (angulo1 === angulo2 || angulo2 === angulo3 || angulo1 === angulo3) {
+    console.log ("Esse triângulo é isósceles");
+} else {console.log ("Esse é um triângulo escaleno")}
 
 console.log ("\nquestão 07");
 //7 - Utilize if/else para escrever um código que
 //    converta uma nota dada em porcentagem (de 0 a 100)
 //    em conceitos de A a F. Siga as seguintes regras:
 
-let notaGessica = 40;
+let notaGessica = "Cleidson";
 
-if (notaGessica > 80 && notaGessica <= 100) {
+if (typeof notaGessica !== "number") {
+    console.log ("Isso não é um número")
+}
+else if (notaGessica < 0 || notaGessica > 100) {
+    console.log ("Nota inválida")
+}
+else if (notaGessica > 80 && notaGessica <= 100) {
     console.log ("Parabéns Gessica, sua nota é -A-");
 }
 else if (notaGessica > 60 && notaGessica <= 80) {
@@ -127,8 +137,10 @@ let numberOne = 8;
 let numberTwo = 3;
 let numberThree = 5;
 
+let par = false;
+
 if (numberOne % 2 === 0 || numberTwo % 2 === 0 || numberThree % 2 === 0) {
-    console.log ("Existe pelo menos um número par entre eles");
-} else {
-    console.log ("Existe somente números ímpares");
+    par = true;
 }
+console.log (par);
+    
