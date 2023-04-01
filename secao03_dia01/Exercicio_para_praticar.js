@@ -82,7 +82,53 @@ else {
 
 console.log ("\nquestão 05");
 
+let angulo1 = true;
+let angulo2 = true;
+let angulo3 = true;
+
+if (angulo1 && angulo2 && angulo3) {
+    console.log ("São ângulos de um triangulo");
+} else {
+    console.log ("Erro, não são ângulos de um triângulo");
+}
+
+console.log ("\nquestão 07");
+//7 - Utilize if/else para escrever um código que
+//    converta uma nota dada em porcentagem (de 0 a 100)
+//    em conceitos de A a F. Siga as seguintes regras:
+
+let notaGessica = 40;
+
+if (notaGessica > 80 && notaGessica <= 100) {
+    console.log ("Parabéns Gessica, sua nota é -A-");
+}
+else if (notaGessica > 60 && notaGessica <= 80) {
+    console.log ("Parabéns Gessica, sua nota é -B-");
+}
+else if (notaGessica > 40 && notaGessica <= 60) {
+    console.log ("Gessica, sua nota é  -C-");
+}
+else if (notaGessica > 20 && notaGessica <= 40) {
+    console.log ("Gessica, sua nota é -D-, precisa estudar");
+}
+else if (notaGessica > 1 && notaGessica <= 20) {
+    console.log ("Gessica, você está reprovada com -E-");
+}
+else {
+    console.log ("Você perdeu de ano com nota -F-");
+}
+
 console.log ("\nquestão 08");
 //8 - Utilize if/else para escrever um código que defina três números em 
-//variáveis e retorne true se pelo menos uma das três for par. Caso 
-//contrário, o código deve retornar false.
+//    variáveis e retorne true se pelo menos uma das três for par. Caso 
+//    contrário, o código deve retornar false.
+
+let numberOne = 8;
+let numberTwo = 3;
+let numberThree = 5;
+
+if (numberOne % 2 === 0 || numberTwo % 2 === 0 || numberThree % 2 === 0) {
+    console.log ("Existe pelo menos um número par entre eles");
+} else {
+    console.log ("Existe somente números ímpares");
+}
