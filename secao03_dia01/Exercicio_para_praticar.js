@@ -86,3 +86,35 @@ console.log ("\nquestão 08");
 //8 - Utilize if/else para escrever um código que defina três números em 
 //variáveis e retorne true se pelo menos uma das três for par. Caso 
 //contrário, o código deve retornar false.
+
+console.log ("\nquestão 09");
+//9 - Utilize if/else para escrever um código que defina três números
+//    em variáveis e retorne true se pelo menos uma das três for ímpar. 
+//    Caso contrário, o código deve retornar false.
+
+let ab = 8;
+let cd = 4;
+let as = 3;
+
+let impar = false;
+
+if (ab % 2 !== 0 || cd % 2 !== 0 || as % 2 !== 0) {
+    impar = true;
+}
+console.log(impar);
+
+console.log ("\nquestão 10");
+//10 - Utilize if/else para escrever um código que se inicie com dois
+//   valores em duas variáveis diferentes: o custo de um produto e 
+//   seu valor de venda. A partir dos valores, o código deve calcular
+//   o lucro (ou seja, o valor de venda menos o custo do produto) 
+//   da empresa ao vender mil produtos.
+
+let custoProduto = 7*1000;
+let valorVenda = 2*1000;
+let lucro = valorVenda - custoProduto; 
+
+if (valorVenda > custoProduto) {
+    console.log ("O lucro da empresa foi de R$ "+ lucro );
+} else {
+    console.log ("A empresa ficou no prejuizo de R$ "+ lucro);
