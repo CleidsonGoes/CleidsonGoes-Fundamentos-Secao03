@@ -127,30 +127,38 @@ console.log ("\nquestão 11");
 // tem descontados de seu salário bruto o INSS e o IR.
 // A notação para um salário de R$1.500,10, por exemplo, deve
 // ser 1500.10. Para as faixas de impostos, use as seguintes referências:
-let salarioBruto = 2000;
-let salarioLiquido = [];
-let INSS = "/";
-let IR = 545;
-let aliquota = 0;
-// INSS (Instituto Nacional do Seguro Social)
-// Salário bruto até R$ 1.556,94: alíquota de 8%
-// Salário bruto de R$ 1.556,95 a R$ 2.594,92: alíquota de 9%
-// Salário bruto de R$ 2.594,93 a R$ 5.189,82: alíquota de 11%
-// Salário bruto acima de R$ 5.189,82: alíquota máxima de R$ 570,88
-// IR (Imposto de Renda)
-if (salarioBruto >= 1500.10 && salarioBruto <= 1556.94); {
-    salarioLiquido = salarioBruto - (salarioBruto * 0.08);
+
+
+let aliquotINSS;
+let aliquotIR;
+
+let grossSalary = 2000.00;
+
+if (grossSalary <= 1556.94) {
+  aliquotINSS = grossSalary * 0.08;
+} else if (grossSalary <= 2594.92) {
+  aliquotINSS = grossSalary * 0.09;
+} else if (grossSalary <= 5189.82) {
+  aliquotINSS = grossSalary * 0.11;
+} else {
+  aliquotINSS = 570.88;
 }
-if (salarioBruto >= 1556.95 && salarioBruto <= 2594.92) {
-    salarioLiquido = salarioBruto - (salarioBruto * 0.09);
-}
-else if (salarioBruto >= 2594.93 && salarioBruto <= 5189.82) {
-    salarioLiquido = salarioBruto - (salarioBruto * 0.11);
-}
-else {
-    salarioLiquido = salarioBruto - 570.88
-}
-console.log (salarioLiquido);
+
+let baseSalary = grossSalary - aliquotINSS;
+
+if (baseSalary <= 1903.98) {
+  aliquotIR = 0;
+} else if (baseSalary <= 2826.65) {
+  aliquotIR = (baseSalary * 0.075) - 142.80;
+} else if (baseSalary <= 3751.05) {
+  aliquotIR = (baseSalary * 0.15) - 354.80;
+} else if (baseSalary <= 4664.68) {
+  aliquotIR = (baseSalary * 0.225) - 636.13;
+} else {
+  aliquotIR = (baseSalary * 0.275) - 869.36;
+};
+
+console.log("Salário: " + (baseSalary - aliquotIR));
 
 // Até R$ 1.903,98: isento de imposto de renda
 // De R$ 1.903,99 a 2.826,65: alíquota de 7,5% e parcela de R$ 142,80 a deduzir do imposto
